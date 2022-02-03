@@ -4,73 +4,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Issue tracker</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+          <div class="large-12 cell">
+            <h1>Karlis Issue tracker</h1>
+          </div>
+        </div>
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <h2>List of current issues</h2>
+                <table>
+                    <th>
+                        <td>ID</td>
+                        <td>Project</td>
+                        <td>Summary</td>
+                        <td>Description</td>
+                        <td>Issue Type</td>
+                        <td>Status</td>
+                        <td>Priority</td>
+                        <td>Action Required</td>
+                        <td>Owner</td>
+                        <td>Date Created</td>
+                        <td>Due Date</td>
+                        <td>Remarks</td>
+                        <td>Files</td>
+                    </th>
+                    <tr>
+                        <td>ABCD123456</td>
+                        <td>Issue tracker</td>
+                        <td>Issue tracker doesnt accept data yet</td>
+                        <td>Issue tracker isnt aceepting data when submitted by user.</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+          </div>
+          <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <h2>create new issue</h2>
+                <form action="">
+                    <label for="">ID</label> 
+                        <input type="text" name="" id=""> 
+                    <label for="">Project</label> 
+                        <input type="text" name="" id=""> 
+                    <label for="">Summary</label> 
+                        <input type="text" name="" id="">
+                    <label for="">Description</label> 
+                        <input type="text" name="" id="">
+                    <label for="issue-type">Issue Type:</label>
+                        <select name="issue-type" id="issue-type">
+                            <option value="bug">Bug</option>
+                            <option value="task">task</option>
+                            <option value="feature">Feature request</option>
+                            <option value="support">Support request</option>
+                            <option value="Plan">Plan</option>
+                        </select> 
+                    <label for="">Status</label> 
+                        <select name="status" id="status">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select> 
+                    <label for="">Priority</label> 
+                        <select name="priority" id="priority">
+                            <option value="critical">critical</option>
+                            <option value="major">major</option>
+                            <option value="normal">normal</option>
+                            <option value="minor">minor</option>
+                        </select> 
+                    <label for="">Owner</label>  
+                        <input type="email" name="" id="">
+                    <label for="">Date Created</label> 
+                        <input type="date" name="" id="">
+                    <label for="">Due Date</label> 
+                        <input type="date" name="" id="">
+                    <label for="">Remarks</label> 
+                        <input type="text" name="" id="">
+                    <label for="">Files</label> 
+                        <input type="file" name="" id="">
 
-<h1>Karlis Issue tracker</h1>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+          </div>
+    </div>
 
-
-<h2>List of current issues</h2>
-
-    <table>
-        <th>
-            <td>ID</td>
-            <td>Project</td>
-            <td>Summary</td>
-            <td>Description</td>
-            <td>Issue Type</td>
-            <td>Status</td>
-            <td>Priority</td>
-            <td>Action Required</td>
-            <td>Owner</td>
-            <td>Date Created</td>
-            <td>Due Date</td>
-            <td>Remarks</td>
-            <td>Files</td>
-        </th>
-        <tr>
-            <td>ABC12345</td>
-            <td>Issue tracker</td>
-            <td>Issue tracker doesnt accept data yet</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-
-
-        </tr>
-    </table>
-
-
-    <h2>create new issue</h2>
-<form action="">
-    <label for="">ID</label> <input type="text" name="" id=""> <br>
-    <label for="">Project</label> <input type="text" name="" id=""> <br>
-    <label for="">Summary</label> <input type="text" name="" id=""><br>
-    <label for="">Description</label> <input type="text" name="" id=""><br>
-    <label for="">Issue Type</label> <input type="text" name="" id=""><br>
-    <label for="">Status</label> <input type="text" name="" id=""><br>
-    <label for="">Priority</label> <input type="text" name="" id=""><br>
-    <label for="">Action Required</label> <input type="text" name="" id=""><br>
-    <label for="">Owner</label> <input type="text" name="" id=""><br>
-    <label for="">Date Created</label> <input type="text" name="" id=""><br>
-    <label for="">Due Date</label> <input type="text" name="" id=""><br>
-    <label for="">Remarks</label> <input type="text" name="" id=""><br>
-    <label for="">Files</label> <input type="text" name="" id=""><br>
-    <input type="button" value="Submit"> 
-
-</form>
+    <script src="js/issuedata.js"></script>
+    <script src="js/serveractions.js"></script>
     
-
-
-
-
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/createGUI.js"></script>\
 </body>
 </html>
