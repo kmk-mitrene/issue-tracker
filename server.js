@@ -2,7 +2,6 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 
-
 http.createServer(function (req, res) {
     var q = url.parse(req.url, true);
   var filename = "." + q.pathname;
@@ -17,13 +16,9 @@ http.createServer(function (req, res) {
 });
 }).listen(8080); 
 
-
-
   const issuelist = require('./issueclass');
   let issueListObj = issuelist.saySomething(); 
   console.log(issueListObj)
-
-
 
   fs.writeFile('issuelist.json', JSON.stringify(issueListObj), function (err) {
     if (err) throw err;
@@ -34,4 +29,3 @@ http.createServer(function (req, res) {
     if (err) throw err;
     console.log(JSON.parse(data));
   }); 
-
