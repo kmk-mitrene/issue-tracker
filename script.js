@@ -3,7 +3,7 @@ var url = require('url');
 var fs = require('fs');
 
 http.createServer(function (req, res) {
-  var q = url.parse(req.url, true);
+    var q = url.parse(req.url, true);
   var filename = "." + q.pathname;
   fs.readFile(filename, function(err, data) {
     if (err) {
@@ -13,5 +13,21 @@ http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write(data);
     return res.end();
-  });
+});
 }).listen(8080); 
+
+
+
+
+fs.writeFile('issuelist.json', 'Hello content!', function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+  }); 
+  
+
+  
+//  var issuelist = require('./issueclass');
+  const issuelist = require('./issueclass');
+  let val = issuelist.saySomething(); // val is "Hello"  
+  console.log(val)
+
