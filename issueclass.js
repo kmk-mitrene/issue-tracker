@@ -10,13 +10,25 @@ class Issue {
   }
 
 
+
+const issueList = {
+    "issueid1":{"name":"Anthon", "age":30, "city":"New York"},
+    "issueid2":{"name":"Felicity", "age":30, "city":"New York"},
+    "issueid3":{"name":"Isobella", "age":30, "city":"New York"}
+    }
+      
+
+
+  
+
 //const issueList = {new: Issue(123, '',  '', ''), new: Issue(124, '',  '', ''),}
 
 
 module.exports = {
     saySomething: function() {
-    console.log("issueList")
-    return sayingSomething;
+    return issueList;
+
+
 }
 }
 

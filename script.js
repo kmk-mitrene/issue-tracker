@@ -17,17 +17,19 @@ http.createServer(function (req, res) {
 }).listen(8080); 
 
 
+//  var issuelist = require('./issueclass');
+  const issuelist = require('./issueclass');
+  let issueListObj = issuelist.saySomething(); // issueListObj is "Hello"  
+  console.log(issueListObj)
 
 
-fs.writeFile('issuelist.json', 'Hello content!', function (err) {
+  fs.writeFile('issuelist.json', JSON.stringify(issueListObj), function (err) {
     if (err) throw err;
     console.log('Saved!');
   }); 
-  
 
-  
-//  var issuelist = require('./issueclass');
-  const issuelist = require('./issueclass');
-  let val = issuelist.saySomething(); // val is "Hello"  
-  console.log(val)
+  fs.readFile('issuelist.json', function (err, data) {
+    if (err) throw err;
+    console.log(JSON.parse(data));
+  }); 
 
