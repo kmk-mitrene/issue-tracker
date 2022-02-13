@@ -1,15 +1,11 @@
-
-
 function formValidate () {
-
-    if (condition) {
-        
-    }
-    
-
+ 
 }
 
-
-function formSubmit (){
-    console.log("hello!")
+function formSubmit (form){
+    let issueID = form.id_field.value;
+    let summary = form.summary_field.value;
+    let description = form.description_field.value
+    
+    console.log(issueID, summary, description)
 }

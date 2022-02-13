@@ -15,15 +15,13 @@
     </nav>
     <h2>create new issue</h2>
     <div class="flexing">
-
-
-                <form action="">
+                <form id="create_issue_form">
                     <label for="id_field">ID</label> 
-                    <input type="text" id="id_field"> 
+                    <input type="text" id="id_field" value="test identificator"> 
                     <label for="summary_field">Summary</label> 
-                    <input type="text" id="summary_field">
+                    <input type="text" id="summary_field" value="test summary">
                     <label for="description_field">Description</label> 
-                    <input type="text" id="description_field">
+                    <input type="text" id="description_field" value="test description">
                         
                     <!--     <label for="">Project</label> 
                             <input type="text" id=""> <br>
@@ -59,7 +57,7 @@
                         <input type="text" name="" id=""><br>
                     <label for="">Files</label> 
                         <input type="file" name="" id=""><br>  -->
-                        <button onClick='formSubmit()'> </button>
+                        <input type='button' onClick="formSubmit(this.form)" value="Submit">
                    <!--  <input type="submit" value="Submit" '><br> -->
                 </form>
             </div>
@@ -67,4 +65,5 @@
 </body>
 <script src="/readform.js"></script>
 <script src="/issueclass.js"></script>
+<script src="/readform.js"></script>
 </html>
