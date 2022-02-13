@@ -5,24 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <a href="/index.html">Home</a>
         <a href="/list.html">See all issues</a>
-        <a href="/create.html">Create an issue</a>
+        <a href="/create.html"><b>Create an issue</b></a>
     </nav>
     <h2>create new issue</h2>
+    <div class="flexing">
+
+
                 <form action="">
-                    <label for="">ID</label> 
-                        <input type="text" name="" id=""> <br>
-                    <label for="">Project</label> 
-                        <input type="text" name="" id=""> <br>
-                    <label for="">Summary</label> 
-                        <input type="text" name="" id=""><br>
-                    <label for="">Description</label> 
-                        <input type="text" name="" id=""><br>
-                    <label for="issue-type">Issue Type:</label>
+                    <label for="id_field">ID</label> 
+                    <input type="text" id="id_field"> <br>
+                    <label for="summary_field">Summary</label> 
+                    <input type="text" id="summary_field"><br>
+                    <label for="description_field">Description</label> 
+                    <input type="text" id="description_field"><br>
+                        
+                    <!--     <label for="">Project</label> 
+                            <input type="text" id=""> <br>
+                           <label for="issue-type">Issue Type:</label>
                         <select name="issue-type" id="issue-type">
                             <option value="bug">Bug</option>
                             <option value="task">task</option>
@@ -53,10 +58,13 @@
                     <label for="">Remarks</label> 
                         <input type="text" name="" id=""><br>
                     <label for="">Files</label> 
-                        <input type="file" name="" id=""><br>
+                        <input type="file" name="" id=""><br>  -->
 
-                    <input type="submit" value="Submit"><br>
+                    <input type="submit" value="Submit" onClick='formSubmit()''><br>
                 </form>
+            </div>
 
 </body>
+<script src="/readform.js"></script>
+<script src="/issueclass.js"></script>
 </html>

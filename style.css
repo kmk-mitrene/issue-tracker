@@ -1,0 +1,19 @@
+
+.flexing {
+    display: flex;
+    flex-wrap:  wrap;
+}
+
+
+.flexing span {
+    font-weight: bold;
+}
+
+
+.container {
+    display: grid;
+    
+
+
+
+  }
